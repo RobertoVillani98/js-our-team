@@ -63,3 +63,22 @@ function stampaCard(array, container) {
     }
 }
 
+// Bonus Add a new member
+btnAdd.addEventListener("click", function () {
+    const newName = document.getElementById("name");
+    const newRole = document.getElementById("role");
+    const newImg = document.getElementById("image");
+
+
+    const newNameMember = newName.value;
+    const newRoleMember = newRole.value;
+    const newImgMember = newImg.value;
+
+    team.push({
+        'name': newNameMember,
+        'role': newRoleMember,
+        'img': newImgMember,
+    });
+    console.clear();
+    stampaCard(team, teamContainer);
+});
